@@ -1,16 +1,25 @@
+# CSP Game
+
+# DRAFTING THE CONCEPT  
+
 my_string = "SEND + MORE = MONEY"
+
+my_words = my_string.split('+')
+temp = my_words.pop().split('=')
+my_words += temp
+for i in range(len(my_words)):
+    my_words[i] = my_words[i].strip()
+
+print(my_words)
+
 my_letters = []
 first_letter = []
 
-for letter in my_string:
-    if letter not in my_letters and letter.isalpha():
-        my_letters.append(letter)
-
-first_letter.append(my_letters[0])
-index = my_string.find('+') + 2
-
-if index != -1:
-    first_letter.append(my_string[index])
+for word in my_words:
+    for letter in word:
+        if letter not in my_letters and letter.isalpha():
+            my_letters.append(letter)
+    first_letter.append(word[0])
 
 print(my_letters)
 print(first_letter)
