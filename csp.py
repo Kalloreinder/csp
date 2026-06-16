@@ -5,8 +5,8 @@
 my_string = "SEND + MORE = MONEY"
 
 my_words = my_string.split('+')
-temp = my_words.pop().split('=')
-my_words += temp
+my_words += my_words.pop().split('=')
+
 for i in range(len(my_words)):
     my_words[i] = my_words[i].strip()
 
