@@ -29,3 +29,5 @@ print(f"Words to check: {my_words}")
 print(f"Unique letters in words: {my_letters}")
 print(f"First letter of each word: {first_letter}")
 print("=" * 80)
+
+number_assignment = {}
